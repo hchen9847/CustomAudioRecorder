@@ -1,0 +1,32 @@
+{
+  "name": "customaudiorecorder",
+  "widgetName": "CustomAudioRecorder",
+  "version": "1.0.0",
+  "description": "Mendix pluggable widget to record audio using microphone from in-browser and exports an MP3",
+  "copyright": "2020 Mendix Technology BV",
+  "author": "Hardy Chen",
+  "config": {
+    "widgetPath": "C:\\Users\\Hardy.Chen\\Projects\\iSTRYM-main/widgets",
+    "projectPath": "C:\\Users\\Hardy.Chen\\Projects\\iSTRYM-main/",
+    "mendixHost": "http://localhost:8080",
+    "developmentPort": "3000"
+  },
+  "packagePath": "mendix",
+  "scripts": {
+    "start": "concurrently \"pluggable-widgets-tools start:server --open\" \"npm:dev\"",
+    "dev": "pluggable-widgets-tools start:js",
+    "build": "pluggable-widgets-tools build:js",
+    "lint": "pluggable-widgets-tools lint",
+    "lint:fix": "pluggable-widgets-tools lint:fix",
+    "prerelease": "npm run lint",
+    "release": "pluggable-widgets-tools release:js"
+  },
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@mendix/pluggable-widgets-tools": "^8.9.2"
+  },
+  "dependencies": {
+    "classnames": "^2.2.6",
+    "mic-recorder-to-mp3": "github:picasocro1/mic-recorder-to-mp3#pause-recording#5cd2ad7"
+  }
+}

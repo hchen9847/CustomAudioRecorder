@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<widget id="mendix.customaudiorecorder.CustomAudioRecorder" pluginWidget="true" needsEntityContext="true" offlineCapable="true"
+        supportedPlatform="Web"
+        xmlns="http://www.mendix.com/widget/1.0/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.mendix.com/widget/1.0/ ../node_modules/mendix/custom_widget.xsd">
+    <name>Custom Audio Recorder</name>
+    <description>Mendix pluggable widget to record audio using microphone from in-browser and exports an MP3</description>
+    <icon/>
+    <properties>
+        <propertyGroup caption="General">
+            <property key="Caption" type="string" required="false">
+                <caption>Caption</caption>
+                <description>Caption</description>
+            </property>
+            <property key="uploadOnStop" type="boolean" defaultValue="false">
+                <caption>Upload on Stop</caption>
+                <description>If set to true, once stop is hit, the widget will upload the audio file to SpeakAI. 
+                Otherwise it will be available for download or playback.</description>
+            </property>
+            <property key="accessTokenAttr" type="attribute" required="false">
+                <caption>Access Token Attribute</caption>
+                <description>This attribute will be updated with the Access token required for SpeakAI uploads.</description>
+                <attributeTypes>
+                    <attributeType name="String"/>
+                </attributeTypes>
+            </property>
+            <property key="presignedURLAttr" type="attribute" required="false">
+                <caption>Presigned URL Attribute</caption>
+                <description>This attribute will be updated with the presigned URL required for SpeakAI uploads.</description>
+                <attributeTypes>
+                    <attributeType name="String"/>
+                </attributeTypes>
+            </property>
+        </propertyGroup>
+        <propertyGroup caption="Actions">
+            <property key="onStopAction" type="action" required="true">
+                <caption>Stop Recording Action</caption>
+                <description>This action will fire any time the recording is stopped to upload the file to SpeakAI, if Upload on Stop is set to true.</description>
+            </property>
+            <property key="uploadPresignedBlobAction" type="action" required="false">
+                <caption>Final Upload Action</caption>
+                <description>This action will fire after the recording is stopped if Upload On Stop is true. This can handle the blob previously stored at the presigned URL.</description>
+            </property>
+        </propertyGroup>
+    </properties>
+</widget>
