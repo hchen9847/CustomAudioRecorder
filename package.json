@@ -6,8 +6,8 @@
   "copyright": "2020 Mendix Technology BV",
   "author": "Hardy Chen",
   "config": {
-    "widgetPath": "C:\\Users\\Hardy.Chen\\Projects\\iSTRYM-main/widgets",
-    "projectPath": "C:\\Users\\Hardy.Chen\\Projects\\iSTRYM-main/",
+    "widgetPath": "C:\\Users\\Hardy.Chen\\Projects\\iSTRYM-hotfix-5/widgets",
+    "projectPath": "C:\\Users\\Hardy.Chen\\Projects\\iSTRYM-hotfix-5/",
     "mendixHost": "http://localhost:8080",
     "developmentPort": "3000"
   },

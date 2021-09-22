@@ -158,7 +158,7 @@ class CustomAudioRecorder extends Component {
     }
 
     componentDidMount() {
-        navigator.getUserMedia(
+        navigator.mediaDevices.getUserMedia(
             { audio: true },
             () => {
                 console.log("Permission Granted");
